@@ -52,7 +52,7 @@ assign [class="steam"] workspace 8
 
 for_window [app_id="discord"] move scratchpad
 for_window [app_id="brave-hnpfjngllnobngcgfapefoaidbinmjnm-Default"] move scratchpad
-for_window [title="scratchpad-terminal"] move scratchpad
+for_window [app_id="scratchpad-terminal"] move scratchpad
 for_window [app_id="org.keepassxc.KeePassXC"] move scratchpad
 
 ###############     Autostart      ##################
@@ -76,7 +76,7 @@ exec .config/sway/scripts/sway-quiet.sh 'app_id.*discord' discord
 ## whatsapp web app
 #exec gtk-launch brave-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop
 exec keepassxc
-exec wezterm cli spawn --new-window -- env SCRATCH_TITLE=scratchpad-terminal fish
+exec wezterm start --class scratchpad-terminal -- fish
 ### misc apps
 
 exec .config/sway/scripts/sway-quiet.sh 'class.*steam' steam
