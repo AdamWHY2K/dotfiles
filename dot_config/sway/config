@@ -170,6 +170,8 @@ bindsym $Mod+F11 exec ~/.config/sway/scripts/scratchpad-toggle.sh
 bindsym $Mod+Shift+F11  move scratchpad
 bindsym $Mod+F12 exec ~/.config/sway/scripts/i3-scratchpad-swap.py right
 bindsym $Mod+Menu exec ~/.config/sway/scripts/i3-scratchpad-swap.py left
+## TODO
+#bindsym $Mod+z exec ~/.config/sway/scripts/i3-scratchpad-dmenu.py
 
 # change focus
 bindsym $Mod+left  focus left
