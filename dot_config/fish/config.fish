@@ -14,7 +14,7 @@ abbr --add --set-cursor cr "fresh% ~/.config/rofi/config.rasi"
 
 abbr --add clr "clear && fastfetch"
 abbr --add lg "lazygit"
-abbr --add lc "lazychezmoi"
+abbr --add lc "chezmoi-mousse"
 abbr --add cz --set-cursor "chezmoi %"
 abbr --add gtree "git log --graph --oneline --all --decorate"
 
