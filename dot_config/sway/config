@@ -49,8 +49,10 @@ set $Mod Mod4
 
 assign [class="steam"] workspace 8
 
+### scratchpad
 
 for_window [app_id="discord"] move scratchpad
+## whatsapp PWA
 for_window [app_id="brave-hnpfjngllnobngcgfapefoaidbinmjnm-Default"] move scratchpad
 for_window [app_id="scratchpad-terminal"] move scratchpad
 for_window [app_id="org.keepassxc.KeePassXC"] move scratchpad
@@ -64,18 +66,25 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec ~/.azotebg
 
 ###### user defined
+
 ### services
+
 exec wl-clip-persist --clipboard regular --all-mime-type-regex '^(?!x-kde-passwordManagerHint).+'
+
 ### background
+
 exec unisic --tray-only
 exec kdeconnect-indicator
 exec mullvad-vpn
+
 ### scratchpad apps
+
 exec .config/sway/scripts/sway-quiet.sh 'app_id.*discord' discord
 ## whatsapp web app
 #exec gtk-launch brave-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop
 exec keepassxc
 exec wezterm start --class scratchpad-terminal -- fish
+
 ### misc apps
 
 exec .config/sway/scripts/sway-quiet.sh 'class.*steam' steam
@@ -83,15 +92,18 @@ exec .config/sway/scripts/sway-quiet.sh 'class.*steam' steam
 #############         Bindings           ##################
 
 # paste
+
 bindsym $Mod+Control+p exec ". ~/.secret_env && wtype $PROLIFIC"
 bindsym $Mod+Control+e exec ". ~/.secret_env && wtype $EMAIL"
 bindsym $Mod+Control+s exec ". ~/.secret_env && wtype $SPAM"
 
 # kill focused window
+
 bindsym $Mod+q kill
 bindsym Mod1+F4 kill
 
 # core applications
+
 bindsym $Mod+Return       exec $term
 bindsym $Mod+s            exec nwg-shell-config
 bindsym $Mod+d            exec rofi -show drun -modi "drun,calc,emoji:rofimoji,run,window,filebrowser"
@@ -107,18 +119,22 @@ bindsym $Mod+slash        exec nwg-shell-help
 bindsym $Mod+numbersign   exec $term -e bash .config/sway/scripts/rule-builder.sh
 
 # Exit menu
+
 bindsym $Mod+x exec $exit
 
 # Exit sway (default way to log you out of your Wayland session)
+
 bindsym $Mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 
 # screenshot
+
 bindsym Print exec unisic --hotkey capture-region
 bindsym Control+Print exec unisic --hotkey ocr-region
 bindsym Shift+Print exec unisic --hotkey record-gif
 bindsym Alt+Print exec unisic --hotkey record-video
 
 # audio
+
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
@@ -128,15 +144,18 @@ bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +2%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -2%
 
 # backlight
+
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
 
 # Reload the configuration file
+
 bindsym $Mod+Shift+c reload
 
 ###########          Workspace Bindings          ###############
 
 # switch to workspace
+
 bindsym $Mod+1 workspace number 1
 bindsym $Mod+2 workspace number 2
 bindsym $Mod+3 workspace number 3
@@ -145,12 +164,16 @@ bindsym $Mod+5 workspace number 5
 bindsym $Mod+6 workspace number 6
 bindsym $Mod+7 workspace number 7
 bindsym $Mod+8 workspace number 8
+bindsym $Mod+9 workspace number 9
+bindsym $Mod+0 workspace number 10
 
 # switch to next or previous workspace
+
 bindsym $Mod+Mod1+Left workspace prev
 bindsym $Mod+Mod1+Right workspace next
 
 # move focused container to workspace
+
 bindsym $Mod+Shift+1 move container to workspace number 1; workspace number 1
 bindsym $Mod+Shift+2 move container to workspace number 2; workspace number 2
 bindsym $Mod+Shift+3 move container to workspace number 3; workspace number 3
@@ -159,10 +182,13 @@ bindsym $Mod+Shift+5 move container to workspace number 5; workspace number 5
 bindsym $Mod+Shift+6 move container to workspace number 6; workspace number 6
 bindsym $Mod+Shift+7 move container to workspace number 7; workspace number 7
 bindsym $Mod+Shift+8 move container to workspace number 8; workspace number 8
+bindsym $Mod+Shift+9 move container to workspace number 9; workspace number 9
+bindsym $Mod+Shift+0 move container to workspace number 10; workspace number 10
 
 ############      Container/Window control  ############
 
 # Scratchpad, Floating
+
 bindsym $Mod+space floating toggle
 floating_modifier Mod1 normal
 
@@ -174,21 +200,25 @@ bindsym $Mod+Menu exec ~/.config/sway/scripts/i3-scratchpad-swap.py left
 #bindsym $Mod+z exec ~/.config/sway/scripts/i3-scratchpad-dmenu.py
 
 # change focus
+
 bindsym $Mod+left  focus left
 bindsym $Mod+down  focus down
 bindsym $Mod+up    focus up
 bindsym $Mod+right focus right
 
 # move focus to the parent container
+
 bindsym $Mod+p      focus parent
 
 # move focused window
+
 bindsym $Mod+Shift+Up    move up
 bindsym $Mod+Shift+Down  move down
 bindsym $Mod+Shift+Left  move left
 bindsym $Mod+Shift+Right move right
 
 # Resizing containers
+
 mode "resize" {
     bindsym Left resize shrink width 10px
     bindsym Down resize grow height 10px
@@ -202,20 +232,24 @@ mode "resize" {
 bindsym $Mod+r mode "resize"
 
 # Size
+
 bindsym Mod1+Up    resize shrink height 10 px or 1 ppt
 bindsym Mod1+Down  resize grow   height 10 px or 1 ppt
 bindsym Mod1+Left  resize shrink width  10 px or 1 ppt
 bindsym Mod1+Right resize grow   width  10 px or 1 ppt
 
 # layout toggle
+
 bindsym Mod1+Tab layout toggle tabbed stacking split
 bindsym $Mod+Tab layout toggle splitv splith
 
 # switch to workspace with urgent window
+
 for_window [urgent="latest"] focus
 focus_on_window_activation   focus
 
 # container layout
+
 # bindsym $Mod+h split h
 # bindsym $Mod+v split v
 bindsym $Mod+Shift+t layout tabbed
@@ -225,11 +259,13 @@ bindsym $Mod+Shift+h layout toggle split
 default_orientation horizontal
 
 # make the current focus fullscreen
+
 bindsym $Mod+f fullscreen
 
 ###############      Border & Gaps     ###############
 
 # change gaps
+
 bindsym $Mod+plus                gaps inner current plus  5
 bindsym $Mod+minus               gaps inner current minus 5
 bindsym Mod1+plus                gaps outer current plus  5
@@ -238,6 +274,7 @@ bindsym Mod1+minus               gaps outer current minus 5
 ############    application settings   ############
 
 # focus, floating, & sticky
+
 for_window [app_id="(?i)(?:blueman-manager|azote|gnome-disks)"] floating enable
 for_window [app_id="(?i)(?:pavucontrol|nm-connection-editor|gsimplecal|galculator)"] floating enable
 for_window [app_id="(?i)(?:firefox|chromium)"] border none
