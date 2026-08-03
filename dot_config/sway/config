@@ -48,6 +48,7 @@ set $Mod Mod4
 ###############      Assign        ##################
 
 assign [class="steam"] workspace 8
+assign [class="^steam_app_"] workspace 7
 
 ### scratchpad
 
