@@ -18,6 +18,7 @@ abbr --add lc "lazychezmoi"
 abbr --add cz --set-cursor "chezmoi %"
 abbr --add gtree "git log --graph --oneline --all --decorate"
 
+alias czd 'pushd /home/adam/.local/share/chezmoi && lazygit; popd'
 alias rb 'systemctl -i reboot'
 alias sd 'systemctl -i poweroff'
 alias ff 'fastfetch --config neofetch.jsonc'
