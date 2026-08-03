@@ -65,7 +65,6 @@ exec ~/.azotebg
 
 ###### user defined
 ### services
-exec kdeconnect-mount.sh -d "bea5e83df45c4068b731e8c104c46c62" /mnt/phone
 exec wl-clip-persist --clipboard regular --all-mime-type-regex '^(?!x-kde-passwordManagerHint).+'
 ### background
 exec unisic --tray-only
