@@ -1,0 +1,48 @@
+{
+  "editor": {
+    "line_numbers": true,
+    "whitespace_spaces_trailing": true,
+    "tab_size": 2,
+    "status_bar": {
+      "left": ["{trust}", "{remote}", "{terminal_restart}", "{cursor}", "{diagnostics}", "{cursor_count}", "{messages}", "{env-manager:env}", "{git_statusbar:branch}"]
+    },
+    "diagnostics_inline_text": true,
+    "completion_popup_auto_show": true,
+    "highlight_current_column": true,
+    "ensure_final_newline_on_save": true,
+    "rainbow_indentation": true,
+    "whitespace_spaces_leading": true
+  },
+  "file_explorer": {
+    "show_hidden": true,
+    "show_gitignored": true
+  },
+  "plugins": {
+    "dashboard": {
+      "settings": {
+        "autoOpen": true
+      }
+    },
+    "git_explorer": {
+      "settings": {
+        "colorNames": true
+      }
+    }
+  },
+  "file_browser": {
+    "show_hidden": true
+  },
+  "keybindings": [
+    {
+      "key": "_",
+      "modifiers": ["ctrl"],
+      "action": "toggle_comment",
+      "when": "normal"
+    },
+    {
+      "key": "d",
+      "modifiers": ["ctrl"],
+      "action": "duplicate_line"
+    }
+  ]
+}
