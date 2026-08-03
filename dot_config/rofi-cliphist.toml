@@ -1,0 +1,33 @@
+[rofi]
+path = "rofi"
+
+[cliphist]
+path = "cliphist"
+
+[clipboard]
+path = "wl-copy"
+
+[text_mode_config]
+title = "Text"
+shortcut = "Alt+q"
+description = "Show text"
+
+[image_mode_config]
+title = "Image"
+shortcut = "Alt+w"
+description = "Show images"
+
+[delete_mode_config]
+title = "Del"
+shortcut = "Alt+e"
+description = "Delete entry"
+
+[delete_previous_config]
+title = "Del previous"
+shortcut = "Alt+r"
+description = "Delete entries before selected"
+
+[delete_next_config]
+title = "Del next"
+shortcut = "Alt+t"
+description = "Delete entries after selected"
