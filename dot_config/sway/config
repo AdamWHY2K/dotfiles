@@ -46,12 +46,11 @@ set $Mod Mod4
 # set $right right
 
 ###############      Assign        ##################
-no_focus [class="^steam$" title=".*"]
+
 assign [class="steam"] workspace 8
 
-no_focus [app_id="discord" title=".*"]
-for_window [app_id="discord"] move scratchpad
 
+for_window [app_id="discord"] move scratchpad
 for_window [app_id="brave-hnpfjngllnobngcgfapefoaidbinmjnm-Default"] move scratchpad
 for_window [title="scratchpad-terminal"] move scratchpad
 for_window [app_id="org.keepassxc.KeePassXC"] move scratchpad
@@ -73,14 +72,14 @@ exec unisic --tray-only
 exec kdeconnect-indicator
 exec mullvad-vpn
 ### scratchpad apps
-exec discord
+exec .config/sway/scripts/sway-quiet.sh 'app_id.*discord' discord
 ## whatsapp web app
 #exec gtk-launch brave-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop
 exec keepassxc
 exec wezterm cli spawn --new-window -- env SCRATCH_TITLE=scratchpad-terminal fish
 ### misc apps
-exec steam
 
+exec .config/sway/scripts/sway-quiet.sh 'class.*steam' steam
 ### Turn off screen on lid closed
 # set $laptop eDP-1
 # bindswitch lid:on output $laptop disable
