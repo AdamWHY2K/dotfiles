@@ -7,6 +7,11 @@ source /usr/share/garuda/garuda-fish-config/config.fish # Do not edit this defau
 
 # -- Insert customizations below this line! --
 
+# Override Garuda's Starship prompt with Tide
+if status --is-interactive
+    source ~/.config/fish/functions/fish_prompt.fish
+end
+
 abbr --add --set-cursor cf "fresh% ~/.config/fish/config.fish"
 abbr --add --set-cursor cs "fresh% ~/.config/sway/config"
 abbr --add --set-cursor cw "fresh% ~/.config/wezterm/wezterm.lua"
