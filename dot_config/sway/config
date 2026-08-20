@@ -20,9 +20,8 @@ set $QT_QPA_PLATFORMTHEME qt6ct
 set $QT_WAYLAND_DISABLE_WINDOWDECORATION 1
 
 # border & title
-for_window [title="^.*"] border pixel 2, title_format "<b> %class >> %title </b>"
+#for_window [title="^.*"] border pixel 2, title_format "<b> %class >> %title </b>"
 default_border pixel 2
-# client.focused "#ffffff" "#285577" "#000000" "#2e9ef4" "#4c7899"
 client.focused "#ffffff" "#ffffff" "#000000" "#d200ff"
 
 
