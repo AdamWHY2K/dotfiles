@@ -238,8 +238,8 @@ bindsym Mod1+Right resize grow   width  10 px or 1 ppt
 
 # layout toggle
 
-bindsym Mod1+Tab layout toggle tabbed stacking split
-bindsym $Mod+Tab layout toggle splitv splith
+bindsym $Mod+Tab layout toggle tabbed stacking split
+bindsym Mod1+Tab layout toggle splitv splith
 
 # switch to workspace with urgent window
 
