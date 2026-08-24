@@ -288,4 +288,4 @@ for_window [app_id="garuda-toolbox"] floating enable
 for_window [title="File Operation Progress"] floating enable
 for_window [title="Confirm to replace files"] floating enable
 for_window [app_id="soffice" title="Text Import"] floating enable
-for_window [instance="brave-browser" window_role="pop-up"] floating enable,move to workspace 4
+for_window [app_id="^brave-browser$" title="^(Subscriptions - YouTube|YouTube)$"] floating enable,move to workspace 4,resize set 1504 822
