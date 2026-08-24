@@ -270,8 +270,7 @@ bindsym Mod1+plus                gaps outer current plus  5
 bindsym Mod1+minus               gaps outer current minus 5
 
 ############    application settings   ############
-
-# focus, floating, & sticky
+for_window [class="VirtualBox Manager"] layout tabbed
 
 for_window [app_id="(?i)(?:blueman-manager|azote|gnome-disks)"] floating enable
 for_window [app_id="(?i)(?:pavucontrol|nm-connection-editor|gsimplecal|galculator)"] floating enable
