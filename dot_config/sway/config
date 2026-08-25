@@ -86,6 +86,7 @@ exec wezterm start --class scratchpad-terminal -- fish
 ### misc apps
 
 exec .config/sway/scripts/sway-quiet.sh 'class.*steam' steam
+exec ~/.config/sway/scripts/brave-ignore-crash.sh
 
 #############         Bindings           ##################
 
