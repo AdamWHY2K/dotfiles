@@ -26,7 +26,7 @@ abbr --add gtree "git log --graph --oneline --all --decorate"
 alias czd 'pushd /home/adam/.local/share/chezmoi && lazygit; popd'
 alias rb 'systemctl -i reboot'
 alias sd 'systemctl -i poweroff'
-alias ff 'fastfetch --config neofetch.jsonc'
+alias ff 'fastfetch'
 alias mx3 'ssh adam@192.168.1.250 -t "fish"'
 alias up 'upd && rustup update && cargo install-update -a'
 # alias nano 'fresh'
@@ -55,9 +55,11 @@ if set -q SCRATCH_TITLE
     end
 end
 
-
+if status --is-interactive && type -q fastfetch
+  fastfetch
+end
 
 # Keep this at the bottom of the file.
 # This shows the "neofetch"/fastfetch output when you open a new terminal.
 # If you don't want to see it, simply comment out the line below.
-__garuda_fastfetch
+# __garuda_fastfetch
