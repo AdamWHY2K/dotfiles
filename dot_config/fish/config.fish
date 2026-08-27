@@ -10,6 +10,7 @@ source /usr/share/garuda/garuda-fish-config/config.fish # Do not edit this defau
 # Override Garuda's Starship prompt with Tide
 if status --is-interactive
     source ~/.config/fish/functions/fish_prompt.fish
+    fastfetch
 end
 
 abbr --add --set-cursor cf "fresh% ~/.config/fish/config.fish"
@@ -17,7 +18,7 @@ abbr --add --set-cursor cs "fresh% ~/.config/sway/config"
 abbr --add --set-cursor cw "fresh% ~/.config/wezterm/wezterm.lua"
 abbr --add --set-cursor cr "fresh% ~/.config/rofi/config.rasi"
 
-abbr --add clr "clear && fastfetch"
+abbr --add clr "clear && ff"
 abbr --add lg "lazygit"
 abbr --add lc "chezmoi-mousse"
 abbr --add cz --set-cursor "chezmoi %"
@@ -55,9 +56,6 @@ if set -q SCRATCH_TITLE
     end
 end
 
-if status --is-interactive && type -q fastfetch
-  fastfetch
-end
 
 # Keep this at the bottom of the file.
 # This shows the "neofetch"/fastfetch output when you open a new terminal.
