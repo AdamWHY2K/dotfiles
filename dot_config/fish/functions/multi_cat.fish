@@ -53,6 +53,9 @@ function cat --description 'multi cat: bat for text, specialised viewers for oth
                 # Media
             case '.mp3' '.flac' '.ogg' '.opus' '.wav' '.m4a' '.mp4' '.mkv' '.webm' '.avi' '.mov'
                 mediainfo -- "$file"
+                # 3D
+            case '.stl' '.obj'
+                dcat --kitty -- "$file"
 
                 # inspect the actual file type when no recognised file extension
             case '*'
@@ -106,6 +109,9 @@ function cat --description 'multi cat: bat for text, specialised viewers for oth
                         # Video
                     case 'video/*'
                         mediainfo -- "$file"
+                        # 3D
+                    case 'model/stl' 'application/sla' 'model/obj'
+                        dcat --kitty -- "$file"
                         # Everything else
                     case '*'
                         bat --style header,snip,changes -- "$file"
