@@ -48,6 +48,7 @@ function bak --argument filename
     cp $filename $filename.bak
 end
 
+source ~/.config/fish/functions/multi_cat.fish
 
 # Don't overwrite scratchpad terminal title
 if set -q SCRATCH_TITLE
