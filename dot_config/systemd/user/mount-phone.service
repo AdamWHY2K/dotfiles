@@ -6,7 +6,7 @@ After=kdeconnectd.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/home/adam/.local/bin/kdeconnect-mount.sh -d bea5e83df45c4068b731e8c104c46c62 /mnt/phone
+ExecStart=/bin/bash -c 'until /home/adam/.local/bin/kdeconnect-mount.sh -d bea5e83df45c4068b731e8c104c46c62 /mnt/phone; do sleep 10; done'
 ExecStop=/usr/bin/fusermount -u /mnt/phone
 
 [Install]
