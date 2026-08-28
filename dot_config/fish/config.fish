@@ -29,7 +29,7 @@ alias rb 'systemctl -i reboot'
 alias sd 'systemctl -i poweroff'
 alias ff 'fastfetch'
 alias mx3 'ssh adam@192.168.1.250 -t "fish"'
-alias up 'upd && rustup update && cargo install-update -a'
+alias up 'upd && rustup update && cargo install-update -ag'
 # alias nano 'fresh'
 # alias micro 'fresh'
 # # Make 'you should use this' fish plugin ignore the above alias
