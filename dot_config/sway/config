@@ -69,6 +69,7 @@ exec ~/.azotebg
 ### services
 
 exec wl-clip-persist --clipboard regular --all-mime-type-regex '^(?!x-kde-passwordManagerHint).+'
+exec pactl set-source-mute @DEFAULT_SOURCE@ 1
 
 ### background
 
@@ -135,6 +136,7 @@ bindsym Alt+Print exec unisic --hotkey record-video
 
 # audio
 
+bindsym $Mod+m exec .config/sway/scripts/mic_toggle.sh
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
