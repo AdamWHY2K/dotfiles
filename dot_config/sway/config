@@ -79,6 +79,8 @@ exec mullvad-vpn
 ### scratchpad apps
 
 exec .config/sway/scripts/sway-quiet.sh 'app_id.*discord' discord
+## whatsapp PWA
+exec gtk-launch brave-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop
 exec keepassxc
 exec wezterm start --class scratchpad-terminal -- fish
 
