@@ -44,6 +44,12 @@ if test -d ~/.cargo/bin
         set -p PATH ~/.cargo/bin
     end
 end
+if test -d ~/.config/sway/scripts
+    if not contains -- ~/.config/sway/scripts $PATH
+        set -p PATH ~/.config/sway/scripts
+    end
+end
+
 
 function bak --argument filename
     cp $filename $filename.bak
