@@ -107,7 +107,7 @@ bindsym Mod1+F4 kill
 
 bindsym $Mod+Return       exec $term
 bindsym $Mod+s            exec nwg-shell-config
-bindsym $Mod+d            exec rofi -show drun -modi "drun,calc,emoji:rofimoji,window,filebrowser,power-menu:rofi-power-menu.sh"
+bindsym $Mod+d            exec rofi -show drun -modi "drun,calc,emoji:rofimoji,window,filebrowser,power-menu:.config/sway/scripts/rofi-power-menu.sh"
 # bindsym $Mod+e            exec $editor
 bindsym $Mod+b            exec $browser
 # bindsym $Mod+F12          exec $launcher
