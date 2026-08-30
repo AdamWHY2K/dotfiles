@@ -37,19 +37,14 @@ alias up 'upd && rustup update && cargo install-update -ag'
 # set -x YSU__IGNORED_GLOBAL_ALIASES nano
 # set -x YSU__IGNORED_GLOBAL_ALIASES micro
 
-
-# Add to PATH
-if test -d ~/.cargo/bin
-    if not contains -- ~/.cargo/bin $PATH
-        set -p PATH ~/.cargo/bin
-    end
-end
-if test -d ~/.config/sway/scripts
-    if not contains -- ~/.config/sway/scripts $PATH
-        set -p PATH ~/.config/sway/scripts
+function add_to_path
+    if test -d $argv[1]
+        fish_add_path $argv[1]
     end
 end
 
+add_to_path ~/.cargo/bin
+add_to_path ~/.config/sway/scripts
 
 function bak --argument filename
     cp $filename $filename.bak
