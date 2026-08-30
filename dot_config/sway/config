@@ -195,7 +195,7 @@ bindsym $Mod+space floating toggle
 floating_modifier Mod1 normal
 
 bindsym $Mod+F11 exec ~/.config/sway/scripts/scratchpad-toggle.sh
-bindsym $Mod+Shift+F11  move scratchpad
+bindsym $Mod+Shift+F11  move scratchpad, move position center
 bindsym $Mod+F12 exec ~/.config/sway/scripts/i3-scratchpad-swap.py right
 bindsym $Mod+Menu exec ~/.config/sway/scripts/i3-scratchpad-swap.py left
 ## TODO

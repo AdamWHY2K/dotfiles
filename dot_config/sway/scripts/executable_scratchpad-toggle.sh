@@ -27,7 +27,7 @@ ID=""
 [ -f "$STATE" ] && ID=$(cat "$STATE")
 
 if [ -n "$ID" ] && id_exists "$ID"; then
-    swaymsg "[con_id=$ID] move workspace current; [con_id=$ID] focus"
+    swaymsg "[con_id=$ID] move workspace current; [con_id=$ID] move position center; [con_id=$ID] focus"
     exit 0
 fi
 

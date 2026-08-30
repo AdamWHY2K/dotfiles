@@ -57,7 +57,7 @@ def main():
     sway.command(f'[con_id={visible_node.id}] move scratchpad')
 
     # Show the next window on the same workspace the old one was on
-    sway.command(f'[con_id={next_node.id}] move workspace {visible_ws_name}')
+    sway.command(f'[con_id={next_node.id}] move workspace {visible_ws_name}, move position center')
 
     if focused_id == visible_node.id:
         # The scratchpad had focus, so the new scratchpad window should too
